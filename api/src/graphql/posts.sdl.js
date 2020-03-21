@@ -1,4 +1,4 @@
-export const schema = gql`
+title const schema = gql`
   type Post {
     id: Int!
     title: String!
