@@ -1,14 +1,43 @@
-import { Label, FieldError, Submit, TextField, TextAreaField, Form } from '@redwoodjs/web'
+import {
+  FieldError,
+  Form,
+  Label,
+  Submit,
+  TextAreaField,
+  TextField,
+} from '@redwoodjs/web'
+import { useMutation } from '@redwoodjs/web'
 import BlogLayout from 'src/layouts/BlogLayout'
 
+const CREATE_CONTACT = gql`
+  mutation CreateContactMutation($input: ContactInput!) {
+    createContact(input: $input) {
+      id
+    }
+  }
+`
+
 const ContactPage = (props) => {
+  const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
+    onCompleted: () => {
+      alert('Thank you for your submission!')
+    },
+  })
+
   const onSubmit = (data) => {
+    create({variables: { input: data }})
     console.log(data)
   }
 
   return (
     <BlogLayout>
       <Form onSubmit={onSubmit} validation={{ mode: 'onBlur' }}>
+        {error && (
+          <div style={{ color: 'red' }}>
+            {"We couldn't send your message: "}
+            {error.message}
+          </div>
+        )}
         <Label
           name="name"
           style={{ display: 'block' }}
@@ -35,16 +64,16 @@ const ContactPage = (props) => {
           name="email"
           style={{ display: 'block' }}
           errorStyle={{ display: 'block', borderColor: 'red' }}
-          validation={{ 
-            required: true,
-            pattern: {
-              value: /[^@]+@[^\.]+\..+/,
-              message: 'Please enter a valid email mofo',
-            }
-          }}
+          //validation={{
+          //  required: true,
+          //  pattern: {
+          //    value: /[^@]+@[^\.]+\..+/,
+          //    message: 'Please enter a valid email mofo',
+          //  }
+          //}}
         />
         <FieldError name='email' style={{ color: 'red' }}  />
-        
+
         <Label
           name="message"
           style={{ display: 'block' }}
@@ -59,9 +88,11 @@ const ContactPage = (props) => {
           validation={{ required: true }}
         />
         <FieldError name='message' style={{ color: 'red' }}  />
-        
 
-        <Submit>Save</Submit>
+
+        <Submit style={{ display: 'block' }} disabled={loading}>
+          Save
+        </Submit>
       </Form>
     </BlogLayout>
   )
