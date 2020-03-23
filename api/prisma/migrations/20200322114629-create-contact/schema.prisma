@@ -1,6 +1,6 @@
 datasource DS {
-  provider = "sqlite"
-  url = "***"
+  provider = "postgresql"
+  url = env("DATABASE_URL")
   
 }
 
