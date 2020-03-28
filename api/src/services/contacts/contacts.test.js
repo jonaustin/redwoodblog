@@ -1,3 +1,4 @@
+import { db } from 'src/lib/db'
 import { contacts } from './contacts'
 
 describe('contacts', () => {

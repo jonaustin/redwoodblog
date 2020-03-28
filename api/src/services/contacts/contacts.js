@@ -1,3 +1,4 @@
+import { db } from 'src/lib/db'
 import { UserInputError } from '@redwoodjs/api'
 
 const validate = (input) => {
