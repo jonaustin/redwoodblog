@@ -1306,7 +1306,7 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@redwoodjs/api@^0.2.2":
+"@redwoodjs/api@^0.2.5":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@redwoodjs/api/-/api-0.2.5.tgz#f13149986b52f311b18dc7c00b5783fd9d5f3073"
   integrity sha512-bO+CfrIK3IFdRjq/hrwFYSVArctbBYic162EmbtWam6/hCCMieXZOfqbJPbNa6JrtFSc84VV2EZzhjV3lxhXug==
@@ -1346,7 +1346,7 @@
     react "16.13.0"
     yargs "^15.1.0"
 
-"@redwoodjs/core@^0.2.2":
+"@redwoodjs/core@^0.2.5":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@redwoodjs/core/-/core-0.2.5.tgz#d5a4bbb59407ff3982ae87ae52dcf61e267a5845"
   integrity sha512-EQKNPanErlFjtZLlfB365pqcTQL4BgmIM2ksUpl5xoqq+dfmp2TIVdmkQMZ0TV/hwyHaIYeURLEDxFq6Jf2xTw==
@@ -1447,14 +1447,14 @@
     findup-sync "^4.0.0"
     toml "^3.0.0"
 
-"@redwoodjs/router@^0.2.2":
+"@redwoodjs/router@^0.2.5":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@redwoodjs/router/-/router-0.2.5.tgz#b18f6b4f8dd2a12b0a4e7337b33c136dcf4e3d58"
   integrity sha512-XR7ceR/tm4KAqyFHS891b09RlOOXd6fu1HmlKQu4zj2vcNJ00YmuXX4V5tUzUT8i39BPLX18H/jMeG59kani1Q==
   dependencies:
     core-js "3.6.4"
 
-"@redwoodjs/web@^0.2.2":
+"@redwoodjs/web@^0.2.5":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@redwoodjs/web/-/web-0.2.5.tgz#80b1cc249bfe64966cd90afc8352a72d6cff3c45"
   integrity sha512-xb5lh9aPl6MpoUgK7XDgZ08MHFduYmNXEWgm/d24Zu4vueB4Qlfk4jkFg8pZK7JudZJlCAA0mbLBKnhJo4R26Q==
